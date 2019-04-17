@@ -19,7 +19,7 @@ public class TextDialog extends BaseDialog<DialogBean> {
 
     @Override
     public int getDialogLayout() {
-        return R.layout.dialog_text;
+        return R.layout.default_dialog_text;
     }
 
     private TextView tvText;

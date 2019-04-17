@@ -19,7 +19,7 @@ public class CommonDialog extends BaseDialog<DialogBean> {
 
     @Override
     public int getDialogLayout() {
-        return R.layout.dialog_common;
+        return R.layout.default_dialog_common;
     }
 
     private TextView tvTitle;

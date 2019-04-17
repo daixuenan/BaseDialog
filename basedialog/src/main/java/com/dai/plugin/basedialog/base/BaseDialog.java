@@ -64,7 +64,7 @@ public abstract class BaseDialog<T> extends Dialog {
         params.width = (int) (screenWidth * width);
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         this.getWindow().setAttributes(params);
-        getWindow().getDecorView().setBackgroundResource(R.drawable.plugin_shape_rect_corner_bg_white);
+        getWindow().getDecorView().setBackgroundResource(R.drawable.default_shape_rect_corner_bg_white);
     }
 
     private void initListeners() {
