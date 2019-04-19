@@ -30,6 +30,7 @@ public class DialogUtils {
     public void show() {
         if (baseDialog != null) {
             baseDialog.showDialog();
+            baseDialog.show();
         }
     }
 

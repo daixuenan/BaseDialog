@@ -5,19 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnCommon"
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="默认的" />
+        android:layout_marginTop="@dimen/default_padding" />
 
-    <Button
-        android:id="@+id/btnCustom"
+    <TextView
+        android:id="@+id/tvContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/default_height"
-        android:text="自定义的" />
-
+        android:layout_marginTop="@dimen/default_padding" />
 </RelativeLayout>

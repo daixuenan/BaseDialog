@@ -48,6 +48,5 @@ public class TextDialog extends BaseDialog<DialogBean> {
                 }
             }
         });
-        show();
     }
 }
