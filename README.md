@@ -61,8 +61,9 @@ implementation 'com.github.daixuenan:BaseDialog:v1.0.1'
 ```
 
 2. 自定义调用
+
+//新建自定义MyDialogBean
 ```markdown
-        //新建自定义MyDialogBean
         public class MyDialogBean {
 
             private String myTitle;
@@ -85,9 +86,11 @@ implementation 'com.github.daixuenan:BaseDialog:v1.0.1'
                 this.myContent = myContent;
             }
         }
+```
 
-        //新建自定义Dialog MyCommonDialog
-        public class MyCommonDialog extends BaseDialog<MyDialogBean> {
+//新建自定义Dialog MyCommonDialog
+```markdown
+public class MyCommonDialog extends BaseDialog<MyDialogBean> {
 
             private TextView tvTitle;
             private TextView tvContent;
@@ -117,9 +120,11 @@ implementation 'com.github.daixuenan:BaseDialog:v1.0.1'
                 }
             }
         }
+```
 
-        //调用Dialog
-         //设置Dialog参数 该类为内部定义实体类，可能不满足需求，需以自定义为主。
+//调用Dialog
+```markdown
+//设置Dialog参数 该类为内部定义实体类，可能不满足需求，需以自定义为主。
                 MyDialogBean myDialogBean = new MyDialogBean();
                 myDialogBean.setMyTitle("标题");
                 myDialogBean.setMyContent("内容");
@@ -144,5 +149,4 @@ implementation 'com.github.daixuenan:BaseDialog:v1.0.1'
                         })
                         //展示Dialog
                         .show();
-
 ```
