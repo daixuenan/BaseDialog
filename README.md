@@ -62,69 +62,69 @@ implementation 'com.github.daixuenan:BaseDialog:v1.0.1'
 
 2. 自定义调用
 
-//新建自定义MyDialogBean
+//新建自定义Model
 ```markdown
-        public class MyDialogBean {
+public class MyDialogBean {
 
-            private String myTitle;
+    private String myTitle;
 
-            private String myContent;
+    private String myContent;
 
-            public String getMyTitle() {
-                return myTitle;
-            }
+    public String getMyTitle() {
+        return myTitle;
+    }
 
-            public void setMyTitle(String myTitle) {
-                this.myTitle = myTitle;
-            }
+    public void setMyTitle(String myTitle) {
+        this.myTitle = myTitle;
+    }
 
-            public String getMyContent() {
-                return myContent;
-            }
+    public String getMyContent() {
+        return myContent;
+    }
 
-            public void setMyContent(String myContent) {
-                this.myContent = myContent;
-            }
-        }
+    public void setMyContent(String myContent) {
+        this.myContent = myContent;
+    }
+}
 ```
 
 //新建自定义Dialog MyCommonDialog
 ```markdown
 public class MyCommonDialog extends BaseDialog<MyDialogBean> {
 
-            private TextView tvTitle;
-            private TextView tvContent;
+    private TextView tvTitle;
+    private TextView tvContent;
 
-            public MyCommonDialog(@NonNull Context context) {
-                super(context);
-            }
+    public MyCommonDialog(@NonNull Context context) {
+        super(context);
+    }
 
-            @Override
-            public int getDialogLayout() {
-                return R.layout.dialog_my_common;
-            }
+    @Override
+    public int getDialogLayout() {
+        return R.layout.dialog_my_common;
+    }
 
-            @Override
-            public void init() {
-                tvTitle = findViewById(R.id.tvTitle);
-                tvContent = findViewById(R.id.tvContent);
-            }
+    @Override
+    public void init() {
+        tvTitle = findViewById(R.id.tvTitle);
+        tvContent = findViewById(R.id.tvContent);
+    }
 
-            @Override
-            public void showDialog() {
-                if (!TextUtils.isEmpty(dialogBean.getMyTitle())) {
-                    tvTitle.setText(dialogBean.getMyTitle());
-                }
-                if (!TextUtils.isEmpty(dialogBean.getMyContent())) {
-                    tvContent.setText(dialogBean.getMyContent());
-                }
-            }
+    @Override
+    public void showDialog() {
+        if (!TextUtils.isEmpty(dialogBean.getMyTitle())) {
+            tvTitle.setText(dialogBean.getMyTitle());
         }
+        if (!TextUtils.isEmpty(dialogBean.getMyContent())) {
+            tvContent.setText(dialogBean.getMyContent());
+        }
+    }
+}
 ```
 
 //调用Dialog
 ```markdown
-//设置Dialog参数 该类为内部定义实体类，可能不满足需求，需以自定义为主。
+                //设置Dialog参数 该类为内部定义实体类，可能不满足需求，需以自定义为主。
                 MyDialogBean myDialogBean = new MyDialogBean();
                 myDialogBean.setMyTitle("标题");
                 myDialogBean.setMyContent("内容");
